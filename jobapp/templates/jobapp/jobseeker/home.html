@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title  %}
+Home
+{% endblock %}
+
+{% block styles %}
+<style>
+
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+    {% for job in jobs %}
+    <div class="job-post">
+        <hr>
+        <div class="row">
+            <div class="col-7"><h4>{{job.position}}</h4></div>
+            <div class="col-3"><a href=""><button class="btn btn-outline-dark">apply</button></a></div>
+        </div>
+        <span>{{job.company}} &nbsp;&nbsp;||&nbsp;&nbsp;{{job.location}} </span>
+        <p><span>experience level: {{job.experience}}</span>&nbsp;&nbsp;||&nbsp;&nbsp;<span>salary: {{job.min_salary}}-{{job.max_salary}}LPA</span></p>
+    </div>
+    {% endfor %}
+    <hr>
+</div>
+{% endblock %}

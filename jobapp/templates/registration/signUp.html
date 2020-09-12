@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %} SignUp {% endblock %}
+
+{% block styles %}
+
+<style>
+    .body{
+        background-color: snow;
+    }
+    .container{
+        display: flex;
+        padding-top: 100px;
+        padding-left: 8%;
+        padding-right: 8%;
+    
+    }
+    .SignUp{
+        padding: 20px;
+        width: 40%;
+        background-color: darkblue;
+        color: white;
+        margin-left: 2%;
+    }
+    .SignUp a{
+        text-decoration: none; 
+        color: white;
+    }
+    .SignUp a:hover{
+        font-size: larger;
+        color: darkblue;
+    }
+    .SignUp:hover{
+        background-color: #e3f2fd;
+        color: darkblue;
+    }
+ 
+
+</style>
+{% endblock %}
+
+
+
+
+{% block content %}
+
+
+
+<div  class="container">
+<div id='recruiter' class="SignUp">
+<a href="{% url 'recruiter-SignUp' %}">    <h4>SignUp as a recruiter...</h4>
+</a>
+</div>
+<div id='jobseeker' class="SignUp">
+    <a href="{% url 'jobseeker-SignUp' %}">    <h4>SignUp as a jobseeker...</h4>
+    </a>
+    </div>
+</div>
+
+
+
+{% endblock %}
